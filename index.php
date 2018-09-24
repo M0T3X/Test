@@ -38,12 +38,12 @@ if (isset($_POST["user"]) && isset($_POST["pass"])) {
 <html>
 <head>
 	<link href="/Ermittlung/css/style.css" rel="stylesheet" type="text/css" media="screen" />
-	<title>Login</title>
+	<title>ODBC Login</title>
 </head>
 <body>
 	<div class="headerArea">
 		<div class="logoArea"><img src="./pics/Logo.svg" alt="Logo" class="logo"></div>
-		<div class="titleArea"><h1>Login</h1></div>
+		<div class="titleArea"><h1>ODBC Login</h1></div>
 	</div>
 	<div class="loginArea">
 		<div class="loginFormArea">

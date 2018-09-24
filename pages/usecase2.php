@@ -70,7 +70,11 @@ if (isset($_SESSION["logedIn"])) {
 ?>
 			</div>
 		</div>
-		<?php echo file_get_contents("../html/page4.php");
+		<?php echo file_get_contents("../html/page4.php"); ?>
+		<script type="text/javascript">
+			document.getElementById("menuAreaElement3").style.color = "#ff0000";
+		</script>
+<?php
 	}
 }
 if (isset($_POST["parameter1"])) {

@@ -1,5 +1,5 @@
 
-					<footer class="footerArea">Bei Fehlern/Support Email an: Michael.Prusakowksi@otto.de</footer>
+					<div class="footerArea">Bei Fehlern/Support Email an: Michael.Prusakowksi@otto.de</div>
 				</div>
 			</div>
 		</div>
