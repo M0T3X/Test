@@ -1,0 +1,83 @@
+.app {
+	width: 100%;
+}
+
+.appInner {
+	width: 66%;
+	margin: 0 auto;
+}
+
+.toolsArea {
+	/* border: 1px solid black;*/
+	width: 100%;
+	margin: auto;
+}
+
+.headerArea {
+	/* border: 1px solid black;*/
+	width: 100%;
+	float: right;
+}
+
+.menuArea {
+	width: 33%;
+	float: left;
+	text-align: center;
+}
+
+.menuAreaElement {
+}
+
+footer {
+	/* border: 1px solid black;*/
+	width: 100%;
+	float: right;
+	text-align: right;
+}
+
+.useCaseArea {
+	/* border: 1px solid black;*/
+	width: 67%;
+	float: right;
+}
+
+.useCaseFormArea {
+	/* border: 1px solid black;*/
+	width: 100%;
+}
+
+.useCaseForm {
+	/* border: 1px solid black;*/
+	width: 100%;
+}
+
+.loginArea {
+	/* border: 1px solid black;*/
+	width: 100%;
+}
+
+.loginFormArea {
+	/* border: 1px solid black;*/
+	width: 100%;
+}
+
+.loginForm {
+	/* border: 1px solid black;*/
+	width: 100%;
+}
+
+.logoArea {
+	width: 33%;
+	float: left;
+	text-align: center;
+}
+
+.logo {
+	width: 150px;
+	height: 50px;
+}
+
+.titleArea {
+	width: 67%;
+	float: right;
+}
