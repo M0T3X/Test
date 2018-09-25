@@ -1,6 +1,8 @@
 <?php 
 session_start();
 
+//unset($_SESSION["step"]);
+
 if (isset($_POST["parameter1"])) {
 	$option1 = False;
 	$option2 = False;
@@ -43,6 +45,53 @@ function useCase($parameter1, $option1, $option2, $option3) {
 	echo "</div>";
 }
 
+
+function step0()
+{
+?>
+	<form class="useCaseForm" action="useCase1.php" method="post">
+		Kundennummer0: <input type="text" name="kundennummer">
+		<input type="submit" name="submit">
+	</form>
+<?php
+	$_SESSION["step"] = 1;
+}
+
+function step1()
+{
+?>
+	<form class="useCaseForm" action="useCase1.php" method="post">
+		Kundennummer1: <input type="text" name="kundennummer">
+		<input type="submit" name="submit">
+	</form>
+<?php
+	$_SESSION["step"] = 2;
+}
+
+function step2()
+{
+?>
+	<form class="useCaseForm" action="useCase1.php" method="post">
+		Kundennummer2: <input type="text" name="kundennummer">
+		<input type="submit" name="submit">
+	</form>
+<?php
+	$_SESSION["step"] = 3;
+}
+
+function step3()
+{
+?>
+	<form class="useCaseForm" action="useCase1.php" method="post">
+		Kundennummer3: <input type="text" name="kundennummer">
+		<input type="submit" name="submit">
+	</form>
+<?php
+	unset($_SESSION["step"]);
+}
+
+
+
 if (isset($_SESSION["logedIn"])) {
 	if ($_SESSION["logedIn"]) {
 ?>
@@ -56,18 +105,33 @@ if (isset($_SESSION["logedIn"])) {
 		<?php echo file_get_contents("../html/page3.php"); ?>
 		<div class="useCaseArea">
 			<div class="useCaseFormArea">
-				<form class="useCaseForm" action="useCase1.php" method="post">
-					Parameter 1 <input type="text" name="parameter1">
-					<input type="checkbox" name="option1"> Option 1
-					<input type="checkbox" name="option2"> Option 2
-					<input type="checkbox" name="option3"> Option 3
-					<input type="submit" name="submit">
-				</form>
-<?php
-				if (isset($_POST["parameter1"])) {
-					useCase($_POST["parameter1"], $option1, $option2, $option3);
+
+
+<?php 
+				if (!isset($_SESSION['step'])) {
+					step0();
+				} elseif(isset($_SESSION['step'])) {
+					if ($_SESSION['step'] == 1) {
+						step1();
+					} elseif ($_SESSION['step'] == 2) {
+						step2();
+					} elseif ($_SESSION['step'] == 3) {
+						step3();
+					}
 				}
 ?>
+
+<?php
+				/*if (isset($_POST["parameter1"])) {
+					useCase($_POST["parameter1"], $option1, $option2, $option3);
+				}*/
+?>
+
+
+
+
+
+
 			</div>
 		</div>
 		<?php echo file_get_contents("../html/page4.php"); ?>
