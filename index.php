@@ -1,5 +1,23 @@
 <?php
 session_start();
+
+//$ip = $_SERVER['REMOTE_ADDR'];
+
+//echo $ip;
+
+
+if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+    $ip = $_SERVER['HTTP_CLIENT_IP'];
+} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+} else {
+    $ip = $_SERVER['REMOTE_ADDR'];
+}
+echo $ip;
+
+
+
+
 if (isset($_SESSION["logedIn"])) {
 	unset($_SESSION["logedIn"]);
 }
@@ -37,6 +55,7 @@ if (isset($_POST["user"]) && isset($_POST["pass"])) {
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="shortcut icon" href="/Ermittlung/pics/pageTabIcon.ico">
 	<link href="/Ermittlung/css/style.css" rel="stylesheet" type="text/css" media="screen" />
 	<title>ODBC Login</title>
 </head>
